@@ -15,12 +15,12 @@ const connectionString =
 'postgresql://aluko17:@localhost:5432/ffl'
 
 const client = new Client({ connectionString })
-client.connect().then(()=>{console.log('client connection')})
+client.connect().then(()=>{console.log('client connection for ffl')})
 
 //get all items
-router.get('/', (req, res, next)=>{
+router.get('/', (req, res)=>{
 	
-	let query ='SELECT id, name FROM ffl ORDER BY id'
+	let query ='SELECT member_id, first_name, last_name FROM members ORDER by member_id'
 	client.query(query)
 	.then(result => {
 		res.send(result.rows)

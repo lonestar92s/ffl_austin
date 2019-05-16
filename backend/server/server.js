@@ -25,6 +25,8 @@ app.use(bodyParser.json());
 //set port
 const PORT = 9000
 
+app.use('/members', memberRouter)
+
 app.listen(PORT, ()=>{
 console.log(`Connected to FFL on port ${PORT}`)
 })
