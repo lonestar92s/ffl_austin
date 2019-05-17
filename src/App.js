@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import Members from './Members/Members.js'
+import League from './League/League.js';
+import Member from './Member/Member.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
+
 
 
 export default class App extends Component {
@@ -7,10 +15,16 @@ export default class App extends Component {
     render() {
 
         return (
-          <div>
-          <h1>Howdy</h1>
-          <Members />
-          </div>
+          <Router>
+
+          <nav>
+          <Link to='/members'>Members</Link>{' '}
+          </nav>
+          <Switch>
+          <Route path ='/members' component={League} />
+          <Route path='/member/:name' component={Member} />
+          </Switch>
+          </Router>
         );
     }
 }

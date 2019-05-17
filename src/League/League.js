@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-const ordinal = require("ordinal-js");
+import { Link } from 'react-router-dom'
 
 
-export default class Members extends Component {
+
+export default class League extends Component {
     state = {
         members: []
     }
@@ -26,7 +27,7 @@ export default class Members extends Component {
 
     render() {
         const membersList = this.state.members.map((members, index) => {
-            return <li key={index}>{members.first_name} {members.last_name} ** Highest Finish: {ordinal.toOrdinal(members.highest_finish)} ** Lowest Finish: {ordinal.toOrdinal(members.lowest_finish)}</li>
+            return <li key={index}><Link to={{pathname:`/member/${members.first_name}`, state:members}}>{members.first_name} {members.last_name}</Link></li>
         })
         return (
             <div>
