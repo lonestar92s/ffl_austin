@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import '../App.css'
 
-import './Countdown.css'
 
 export default class LandingPage extends Component {
 	render(){
