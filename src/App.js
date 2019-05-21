@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import League from './League/League.js';
 import Member from './Member/Member.js';
-import LandingPage from './LandingPage/LandingPage.js'
+import LandingPage from './LandingPage/LandingPage.js';
+
 import './App.css'
 import {
   BrowserRouter as Router,

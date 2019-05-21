@@ -1,18 +1,11 @@
-import React, { Component } from 'react';
-import '../App.css'
+import React from 'react';
 
 
-export default class LandingPage extends Component {
-	render(){
-		return (
-			<div>
-			<h1>
-				Unprotected Sacks
-			</h1>
-			<h2>
-			
-			</h2>
-			</div>
-		)
-	}
+
+function LandingPage(){
+	const header = 'Unprotected Sacks';
+
+	return <h1>{header}</h1>
 }
+
+export default LandingPage;

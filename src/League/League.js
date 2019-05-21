@@ -27,7 +27,7 @@ export default class League extends Component {
 
     render() {
         const membersList = this.state.members.map((members, index) => {
-            return <li key={index}><Link to={{pathname:`/member/${members.first_name}`, state:members}}>{members.first_name} {members.last_name}</Link></li>
+            return <li key={index}><Link to={{pathname:`/member/${members.first_name}`, state:members}}>{members.first_name} {members.last_name} {members.finishes}</Link></li>
         })
         return (
             <div>
